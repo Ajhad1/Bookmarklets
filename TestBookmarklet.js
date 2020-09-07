@@ -1,4 +1,4 @@
-javascript:(function(){
-	window.alert("Yay! This works!");
+(function(){
+	window.alert("Yay! This Bookmarklet Works!");
 	}
 )();
