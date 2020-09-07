@@ -1,4 +1,4 @@
-(function(){
+javascript:(function(){
 	window.alert("Yay! This works!");
 	}
 )();
