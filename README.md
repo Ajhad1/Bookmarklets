@@ -5,7 +5,7 @@ Code to create Bookmarklets from http://www.dev-hq.net/posts/1--create-javascrip
 
 Example Bookmark:
 
-`javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
+`javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='//cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
 
 ## raw.githubusercontent.com will no longer work
 
@@ -30,11 +30,11 @@ There *is* a good workaround for this, now, by using [jsdelivr.net][pa].
 
 Use this URL to get the latest version:
 
-    http://cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js
+    //cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js
 
 Use this URL to get a specific version or commit hash:
 
-    http://cdn.jsdelivr.net/gh/<username>/<repo>@<version or hash>/path/to/file.js
+    //cdn.jsdelivr.net/gh/<username>/<repo>@<version or hash>/path/to/file.js
 
 **For production environments**, consider targeting a specific tag or commit-hash rather than the branch. Using the _latest_ link may result in long-term caching of the file, causing your link to not be updated as you push new versions. Linking to a file by commit-hash or tag makes the link unique to version.
 
