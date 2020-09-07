@@ -14,3 +14,7 @@ Non-Working Example:
 Working Example:
 
 `javascript:(function() {var url = '//www.sprymedia.co.uk/VisualEvent/VisualEvent_Loader.js';if( typeof VisualEvent!='undefined' ) {if ( VisualEvent.instance !== null ) {VisualEvent.close();}else {new VisualEvent();}}else {var n=document.createElement('script');n.setAttribute('language','JavaScript');n.setAttribute('src',url+'?rand='+new Date().getTime());document.body.appendChild(n);}})();`
+
+Test on Working Example:
+
+`javascript:(function() {var url = '//www.sprymedia.co.uk/VisualEvent/VisualEvent_Loader.js';var n=document.createElement('script');n.setAttribute('language','JavaScript');n.setAttribute('src',url+'?rand='+new Date().getTime());document.body.appendChild(n);})();`
