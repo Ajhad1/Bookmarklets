@@ -7,6 +7,8 @@ Example Bookmark:
 
 `javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
 
+## raw.githubusercontent.com will no longer work
+
 There *is* a good workaround for this, now, by using [jsdelivr.net][pa].
 
 **Steps**:
