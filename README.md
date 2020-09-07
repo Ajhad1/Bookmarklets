@@ -3,18 +3,46 @@ Curation of Bookmarklets
 
 Code to create Bookmarklets from http://www.dev-hq.net/posts/1--create-javascript-bookmarklet
 
-Example:
+Example Bookmark:
 
-`javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://raw.github.com/davatron5000/fitWeird/master/fitWeird.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
+`javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='http://cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
 
-Non-Working Example:
+There *is* a good workaround for this, now, by using [jsdelivr.net][pa].
 
-`javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://raw.githubusercontent.com/Ajhad1/Bookmarklets/master/ClickAllSpecifiedButtons.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
+**Steps**:
 
-Working Example:
+1. Find your link on GitHub, and click to the "Raw" version.
+2. Copy the URL.
+3. Change `raw.githubusercontent.com` to `cdn.jsdelivr.net`
+4. Insert `/gh/` before your username.
+5. Remove the `branch` name.
+5. (Optional) Insert the _version_ you want to link to, as `@version` (if you do not do this, you will get the _latest_ - which may cause long-term caching)
 
-`javascript:(function() {var url = '//www.sprymedia.co.uk/VisualEvent/VisualEvent_Loader.js';if( typeof VisualEvent!='undefined' ) {if ( VisualEvent.instance !== null ) {VisualEvent.close();}else {new VisualEvent();}}else {var n=document.createElement('script');n.setAttribute('language','JavaScript');n.setAttribute('src',url+'?rand='+new Date().getTime());document.body.appendChild(n);}})();`
+---
 
-Test on Working Example:
+**Examples**:
 
-`javascript:(function() {var url = '//www.sprymedia.co.uk/VisualEvent/VisualEvent_Loader.js';var n=document.createElement('script');n.setAttribute('language','JavaScript');n.setAttribute('src',url+'?rand='+new Date().getTime());document.body.appendChild(n);})();`
+<!-- language-all: none -->
+
+    http://raw.githubusercontent.com/<username>/<repo>/<branch>/path/to/file.js
+
+Use this URL to get the latest version:
+
+    http://cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js
+
+Use this URL to get a specific version or commit hash:
+
+    http://cdn.jsdelivr.net/gh/<username>/<repo>@<version or hash>/path/to/file.js
+
+**For production environments**, consider targeting a specific tag or commit-hash rather than the branch. Using the _latest_ link may result in long-term caching of the file, causing your link to not be updated as you push new versions. Linking to a file by commit-hash or tag makes the link unique to version.
+
+---
+
+**Why is this needed?**
+
+In 2013, GitHub started using `X-Content-Type-Options: nosniff`, which instructs more modern browsers to enforce strict MIME type checking. It then returns the raw files in a MIME type returned by the server, preventing the browser from using the file as-intended (if the browser honors the setting).
+
+For background on this topic, please refer to [this discussion thread][qu].
+
+[pa]://www.jsdelivr.com
+[qu]://bugs.chromium.org/p/chromium/issues/detail?id=180007
