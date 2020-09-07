@@ -14,6 +14,7 @@ Code to create Bookmarklets from http://www.dev-hq.net/posts/1--create-javascrip
 ## raw.githubusercontent.com will no longer work
 
 There *is* a good workaround for this, now, by using [jsdelivr.net][pa].
+
 https://stackoverflow.com/a/18049842/13033365
 
 **Steps**:
