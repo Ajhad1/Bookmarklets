@@ -1,3 +1,4 @@
-function(){
+(function(){
 	alert("Yay! This works!");
 	};
+)();
