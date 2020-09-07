@@ -49,5 +49,5 @@
         } else {
             console.log("Cancelled Button Clicking");
         };
-    }, 3000);
+    }, 30);
 })();
