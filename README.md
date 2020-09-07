@@ -3,9 +3,13 @@ Curation of Bookmarklets
 
 Code to create Bookmarklets from http://www.dev-hq.net/posts/1--create-javascript-bookmarklet
 
-Example Bookmark:
+**Example Bookmark:**
 
 `javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='//cdn.jsdelivr.net/gh/<username>/<repo>/path/to/file.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
+
+**Working Example**
+
+`javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='//cdn.jsdelivr.net/gh/Ajhad1/Bookmarklets/TestBookmarklet.js?v='+parseInt(Math.random()*99999999);document.body.appendChild(s);})();`
 
 ## raw.githubusercontent.com will no longer work
 
