@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name        NoBrighter
-// @namespace   https://github.com/ajhad1/userjs/NoBrighter.user.js
+// @namespace   https://github.com/ajhad1/Browser-Code/Tamper-Monkey/NoBrighter.js
 // @description Change element's background color that is too bright to a light green. AND continuously monitor for updates to page without page load
 // @author      henix
+// @author	Ajhad1
 // @version     20210304.1
 // @include     http://*
 // @include     https://*
